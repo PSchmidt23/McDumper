@@ -14,13 +14,24 @@ function App() {
     setCurrentPage('signUp');
   };
 
+  const navigateToWelcome = () => {
+    setCurrentPage('welcome');
+  };
+
   return (
     <div className="App">
       {currentPage === 'welcome' && (
-        <WelcomePage navigateToSignIn={navigateToSignIn} navigateToSignUp={navigateToSignUp} />
+        <WelcomePage 
+          navigateToSignIn={navigateToSignIn} 
+          navigateToSignUp={navigateToSignUp} 
+        />
       )}
-      {currentPage === 'signIn' && <SignInPage />}
-      {currentPage === 'signUp' && <SignUpPage />}
+      {currentPage === 'signIn' && (
+        <SignInPage navigateToWelcome={navigateToWelcome} />
+      )}
+      {currentPage === 'signUp' && (
+        <SignUpPage navigateToWelcome={navigateToWelcome} />
+      )}
     </div>
   );
 }

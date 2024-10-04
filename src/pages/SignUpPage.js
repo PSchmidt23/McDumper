@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { auth } from '../services/firebaseConfig';
 import { RecaptchaVerifier, signInWithPhoneNumber } from 'firebase/auth';
 
-const SignUpPage = () => {
+const SignUpPage = ({ navigateToWelcome }) => {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [verificationCode, setVerificationCode] = useState('');
   const [confirmationResult, setConfirmationResult] = useState(null);
@@ -111,6 +111,8 @@ const SignUpPage = () => {
           </button>
         </>
       )}
+
+      <button onClick={navigateToWelcome}>Back to Welcome</button>
     </div>
   );
 };

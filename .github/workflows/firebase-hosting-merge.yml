@@ -9,8 +9,6 @@ on:
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
-    env:
-      FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_MCDUMPER_36B77 }}  # Add this line
     steps:
       - uses: actions/checkout@v4
       - run: npm ci && npm run build
