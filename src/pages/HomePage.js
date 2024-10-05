@@ -7,7 +7,9 @@ const HomePage = ({ navigateToWelcome }) => {
   const user = firebase.auth().currentUser;
 
   const handleSignOut = () => {
-    firebase.auth().signOut()
+    firebase
+      .auth()
+      .signOut()
       .then(() => {
         console.log('User signed out');
         navigateToWelcome();
@@ -27,7 +29,6 @@ const HomePage = ({ navigateToWelcome }) => {
         </div>
       )}
       <button onClick={handleSignOut}>Sign Out</button>
-      {/* Add more content or components here */}
     </div>
   );
 };

@@ -12,7 +12,7 @@ const withAuthProtection = (WrappedComponent, navigateToWelcome) => {
         }
       });
       return () => unsubscribe();
-    }, []); // Removed navigateToWelcome from dependency array
+    }, []);
 
     return <WrappedComponent {...props} />;
   };

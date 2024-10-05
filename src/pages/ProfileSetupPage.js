@@ -11,7 +11,8 @@ const ProfileSetupPage = ({ navigateToHome }) => {
     const user = firebase.auth().currentUser;
 
     if (user) {
-      user.updateProfile({ displayName })
+      user
+        .updateProfile({ displayName })
         .then(() => {
           console.log('Profile updated');
           navigateToHome();

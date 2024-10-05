@@ -1,12 +1,12 @@
+// src/pages/WelcomePage.js
+
 import React from 'react';
 
-const WelcomePage = ({ navigateToSignIn, navigateToSignUp }) => {
+const WelcomePage = ({ navigateToSignIn }) => {
   return (
-    <div className="welcome-container">
-      <h1 className="welcome-title">McDumper</h1>
-      <p className="welcome-caption">Built for Dumpys</p>
-      <button className="welcome-btn" onClick={navigateToSignIn}>Sign In</button>
-      <button className="welcome-btn" onClick={navigateToSignUp}>Sign Up</button>
+    <div>
+      <h1>Welcome to McDumper</h1>
+      <button onClick={navigateToSignIn}>Sign Up / Sign In</button>
     </div>
   );
 };

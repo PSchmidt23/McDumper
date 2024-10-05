@@ -1,3 +1,5 @@
+// src/components/SignInPage.js
+
 import React, { useEffect } from 'react';
 import { firebase } from '../services/firebaseConfig';
 import * as firebaseui from 'firebaseui';
