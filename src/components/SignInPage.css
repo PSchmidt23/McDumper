@@ -1,0 +1,12 @@
+.signin-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  #firebaseui-auth-container {
+    width: 100%;
+    max-width: 400px;
+  }
+  
