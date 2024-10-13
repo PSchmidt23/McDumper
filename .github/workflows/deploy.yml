@@ -14,7 +14,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      # Step 2: Set up Node.js
+      # Step 2: Set up Node.js environment
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
@@ -28,11 +28,11 @@ jobs:
       - name: Build Project
         run: npm run build
 
-      # Step 5: Deploy to Firebase
+      # Step 5: Deploy to Firebase Hosting
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@v2.2.0
         with:
           args: deploy --only hosting
-       env:
-  GCP_SA_KEY: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+        env:
+          GCP_SA_KEY: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
 
