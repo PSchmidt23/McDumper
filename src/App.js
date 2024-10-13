@@ -1,47 +1,63 @@
 // src/App.js
 
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { AuthProvider, AuthContext } from './AuthContext'; // Ensure the path is correct
 import WelcomePage from './pages/WelcomePage';
-import SignInPage from './components/SignInPage';
-import ProfileSetupPage from './pages/ProfileSetupPage';
-import HomePage from './pages/HomePage';
-import withAuthProtection from './components/withAuthProtection';
+import PhoneAuth from './components/PhoneAuth';
+import Dashboard from './components/Dashboard';
+import ProfilePage from './pages/ProfilePage';
+import ProfileSetup from './pages/ProfileSetup'; // Import the new ProfileSetup component
+import { ToastContainer } from 'react-toastify'; // Optional: For toast notifications
+import 'react-toastify/dist/ReactToastify.css'; // Optional: Toast styles
+
+// PrivateRoute component to protect routes
+const PrivateRoute = ({ children }) => {
+  const { currentUser } = useContext(AuthContext);
+  return currentUser ? children : <Navigate to="/sign-in" />;
+};
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('welcome');
-
-  const navigateToSignIn = () => {
-    console.log('Navigating to SignInPage');
-    setCurrentPage('signIn');
-  };
-
-  const navigateToProfileSetup = () => {
-    console.log('Navigating to ProfileSetupPage');
-    setCurrentPage('profileSetup');
-  };
-
-  const navigateToHome = () => {
-    console.log('Navigating to HomePage');
-    setCurrentPage('home');
-  };
-
-  const navigateToWelcome = () => {
-    console.log('Navigating to WelcomePage');
-    setCurrentPage('welcome');
-  };
-
-  const ProtectedProfileSetupPage = withAuthProtection(ProfileSetupPage, navigateToWelcome);
-  const ProtectedHomePage = withAuthProtection(HomePage, navigateToWelcome);
-
   return (
-    <div className="App">
-      {currentPage === 'welcome' && <WelcomePage navigateToSignIn={navigateToSignIn} />}
-      {currentPage === 'signIn' && <SignInPage navigateToProfileSetup={navigateToProfileSetup} />}
-      {currentPage === 'profileSetup' && (
-        <ProtectedProfileSetupPage navigateToHome={navigateToHome} />
-      )}
-      {currentPage === 'home' && <ProtectedHomePage navigateToWelcome={navigateToWelcome} />}
-    </div>
+    <AuthProvider>
+      <Router>
+        <ToastContainer /> {/* Optional: Enables toast notifications */}
+        <Routes>
+          {/* Public Routes */}
+          <Route path="/" element={<WelcomePage />} />
+          <Route path="/sign-in" element={<PhoneAuth />} />
+
+          {/* Protected Routes */}
+          <Route
+            path="/dashboard"
+            element={
+              <PrivateRoute>
+                <Dashboard />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/profile-setup"
+            element={
+              <PrivateRoute>
+                <ProfileSetup />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/profile"
+            element={
+              <PrivateRoute>
+                <ProfilePage />
+              </PrivateRoute>
+            }
+          />
+
+          {/* Catch-All Route */}
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+      </Router>
+    </AuthProvider>
   );
 }
 
