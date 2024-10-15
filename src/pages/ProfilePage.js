@@ -1,12 +1,12 @@
 // src/pages/ProfilePage.js
 
 import React, { useContext } from 'react';
-import { AuthContext } from '../AuthContext'; // Ensure the path is correct
-import { auth } from '../firebaseConfig';
+import { AuthContext } from '../contexts/AuthContext'; // Updated import path
+import { auth } from '../firebase/firebaseConfig'; // Updated import path
 import { signOut } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 import { FaCog } from 'react-icons/fa'; // Using react-icons for the settings icon
-import '../styles/ProfilePage.css';
+import './ProfilePage.css'; // Updated import path
 import { toast } from 'react-toastify'; // Optional: For toast notifications
 
 const ProfilePage = () => {

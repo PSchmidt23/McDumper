@@ -1,13 +1,13 @@
-// src/components/PhoneAuth.js
+// src/components/PhoneAuth/PhoneAuth.js
 
 import React, { useState, useContext, useEffect } from 'react';
-import { auth } from '../firebaseConfig';
+import { auth } from '../../firebase/firebaseConfig'; // Updated import path
 import { RecaptchaVerifier, signInWithPhoneNumber } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
-import '../styles/PhoneAuth.css';
-import { AuthContext } from '../AuthContext';
+import './PhoneAuth.css'; // Updated import path
+import { AuthContext } from '../../contexts/AuthContext'; // Updated import path
 import { toast } from 'react-toastify'; // Optional: For toast notifications
 
 const PhoneAuth = () => {

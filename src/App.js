@@ -2,12 +2,12 @@
 
 import React, { useContext } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { AuthProvider, AuthContext } from './AuthContext'; // Ensure the path is correct
+import { AuthProvider, AuthContext } from './contexts/AuthContext'; // Updated path
 import WelcomePage from './pages/WelcomePage';
-import PhoneAuth from './components/PhoneAuth';
-import Dashboard from './components/Dashboard';
+import PhoneAuth from './components/PhoneAuth/PhoneAuth'; // Updated path
+import Dashboard from './components/Dashboard/Dashboard'; // Updated path
 import ProfilePage from './pages/ProfilePage';
-import ProfileSetup from './pages/ProfileSetup'; // Import the new ProfileSetup component
+import ProfileSetup from './pages/ProfileSetup';
 import { ToastContainer } from 'react-toastify'; // Optional: For toast notifications
 import 'react-toastify/dist/ReactToastify.css'; // Optional: Toast styles
 

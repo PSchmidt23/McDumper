@@ -1,0 +1,88 @@
+.
+├── .DS_Store
+├── .env
+├── .eslintrc.js
+├── .eslintrc.json
+├── .firebase
+│   └── hosting.YnVpbGQ.cache
+├── .firebaserc
+├── .github
+│   └── workflows
+│       ├── deploy.yml
+│       ├── firebase-hosting-merge.yml
+│       └── firebase-hosting-pull-request.yml
+├── .gitignore
+├── .vscode
+│   └── extensions.json
+├── README.md
+├── firebase.json
+├── mcdumper_backup
+│   ├── .gitignore
+│   ├── mcdumper
+│   ├── public
+│   │   ├── favicon.ico
+│   │   ├── index.html
+│   │   ├── logo192.png
+│   │   ├── logo512.png
+│   │   ├── manifest.json
+│   │   └── robots.txt
+│   └── src
+│       ├── App.css
+│       ├── App.js
+│       ├── App.test.js
+│       ├── index.css
+│       ├── index.js
+│       ├── logo.svg
+│       ├── reportWebVitals.js
+│       └── setupTests.js
+├── package-lock.json
+├── package.json
+├── project-structure.txt
+├── public
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── manifest.json
+│   └── robots.txt
+└── src
+    ├── .DS_Store
+    ├── App.css
+    ├── App.js
+    ├── App.test.js
+    ├── AuthContext.js
+    ├── components
+    │   ├── .DS_Store
+    │   ├── Dashboard.js
+    │   ├── PhoneAuth.js
+    │   ├── SignInPage.css
+    │   └── SignInPage.js
+    ├── contexts
+    │   └── AuthProvider.js
+    ├── firebaseConfig.js
+    ├── index.css
+    ├── index.js
+    ├── logo.svg
+    ├── pages
+    │   ├── .DS_Store
+    │   ├── ProfilePage.js
+    │   ├── ProfileSetup.js
+    │   └── WelcomePage.js
+    ├── reportWebVitals.js
+    ├── services
+    │   ├── .DS_Store
+    │   └── firebaseConfig.js
+    ├── setupTests.js
+    ├── src
+    │   └── contexts
+    │       ├── AuthProvider.js
+    │       └── PhoneAuth.js
+    └── styles
+        ├── Dashboard.css
+        ├── PhoneAuth.css
+        ├── ProfilePage.css
+        ├── ProfileSetup.css
+        ├── WelcomePage.css
+        └── global.css
+
+18 directories, 68 files

@@ -1,12 +1,11 @@
-// src/components/SignInPage.js
+// src/components/Auth/SignInPage.js
 
 import React, { useEffect } from 'react';
-import { auth } from '../services/firebaseConfig'; // Correct import
+import { auth } from '../../firebase/firebaseConfig'; // Updated import path
 import * as firebaseui from 'firebaseui';
 import 'firebaseui/dist/firebaseui.css';
 import { useNavigate } from 'react-router-dom';
 import './SignInPage.css';
-
 
 const SignInPage = () => {
   const navigate = useNavigate();

@@ -1,13 +1,13 @@
-// src/components/Dashboard.js
+// src/components/Dashboard/Dashboard.js
 
 import React, { useContext, useEffect, useState } from 'react';
-import { auth, db, storage } from '../firebaseConfig';
+import { auth, db, storage } from '../../firebase/firebaseConfig'; // Updated import path
 import { signOut } from 'firebase/auth';
-import { AuthContext } from '../AuthContext';
+import { AuthContext } from '../../contexts/AuthContext'; // Updated import path
 import { useNavigate, Link } from 'react-router-dom';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { doc, updateDoc, getDoc } from 'firebase/firestore';
-import '../styles/Dashboard.css';
+import './Dashboard.css'; // Updated import path
 import { v4 as uuidv4 } from 'uuid';
 
 const Dashboard = () => {

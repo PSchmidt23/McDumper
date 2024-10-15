@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../styles/WelcomePage.css'; // Correct import path
+import './WelcomePage.css'; // Updated import path
 
 const WelcomePage = () => {
   const navigate = useNavigate();
