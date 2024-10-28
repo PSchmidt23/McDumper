@@ -1,71 +1,165 @@
-/* src/styles/ProfilePage.css */
+/* src/pages/ProfilePage.css */
+
+/* Import the Pacifico font */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 .profile-page-container {
-    max-width: 700px;
-    margin: 50px auto;
-    padding: 30px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
-    background-color: #ffffff;
-    text-align: center;
-  }
-  
-  .profile-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 25px;
-  }
-  
-  .profile-header h2 {
-    color: #333333;
-  }
-  
-  .settings-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #333333;
-    transition: color 0.3s ease;
-  }
-  
-  .settings-button:hover {
-    color: #007bff;
-  }
-  
-  .profile-info {
-    text-align: left;
-  }
-  
-  .profile-picture {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 0 auto 25px auto;
-    display: block;
-  }
-  
-  .profile-picture-placeholder {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background-color: #e0e0e0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #555555;
-    font-size: 1em;
-    margin: 0 auto 25px auto;
-  }
-  
-  .profile-info p {
-    font-size: 1.1em;
-    margin: 12px 0;
-  }
-  
-  .profile-info strong {
-    color: #555555;
-  }
-  
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  background-color: #0b0b0b; /* Dark background */
+  color: #ffffff;
+}
+
+.profile-header {
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.settings-button {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.profile-info {
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.profile-picture {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.profile-picture-placeholder {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #3a3a3a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.user-name {
+  font-size: 1.5em;
+  margin: 12px 0;
+  color: #ffffff;
+}
+
+.instagram-handle {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.instagram-handle svg {
+  margin-right: 5px;
+}
+
+.share-profile-button {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1em;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.share-profile-button svg {
+  margin-right: 5px;
+}
+
+.dumps-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.dumps-header h3 {
+  margin: 0;
+}
+
+.add-dump-button {
+  background-color: #ffffff;
+  color: #0b0b0b;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #3a3a3a;
+  margin-bottom: 20px;
+}
+
+.dumps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dump-month-group {
+  margin-bottom: 30px;
+}
+
+.month-year-header {
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #3a3a3a;
+  padding-bottom: 5px;
+}
+
+/* Adjusting the profile info paragraph styles */
+.profile-info p {
+  font-size: 1.1em;
+  margin: 12px 0;
+  color: #ffffff;
+}
+
+.profile-info strong {
+  color: #ffffff;
+}
+
+/* Adding styles for the instagram container in public profile */
+.instagram-container {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+.instagram-container svg {
+  margin-right: 5px;
+}

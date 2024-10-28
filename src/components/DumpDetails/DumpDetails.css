@@ -1,0 +1,124 @@
+/* src/components/DumpDetails/DumpDetails.css */
+
+.dump-details-container {
+    max-width: 100%;
+    margin: 0 auto;
+    color: #ffffff;
+    padding-top: 0; /* Remove padding-top */
+  }
+  
+  .cover-photo-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    /* Remove max-height */
+  }
+  
+  .cover-photo {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .dump-title {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 2.5em;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  }
+  
+  .more-options-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .options-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #1b1b1b;
+    border: 1px solid #3a3a3a;
+    border-radius: 5px;
+    z-index: 10;
+  }
+  
+  .more-options-button:hover + .options-menu,
+  .options-menu:hover {
+    display: block;
+  }
+  
+  .options-menu button {
+    background: none;
+    border: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+  }
+  
+  .options-menu button:hover {
+    background-color: #3a3a3a;
+  }
+  
+  .photos-grid {
+    display: grid;
+    grid-gap: 5px;
+    padding: 10px;
+    margin-top: 20px; /* Add margin to separate from cover photo */
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .photos-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media only screen and (min-width: 601px) {
+    .photos-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  .dump-photo {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    cursor: pointer;
+  }
+  
+  /* New media query adjustments */
+  
+  @media only screen and (min-width: 768px) {
+    .cover-photo-container {
+      height: 400px; /* Set a fixed height for larger screens */
+    }
+  
+    .cover-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .cover-photo-container {
+      height: auto;
+    }
+  
+    .cover-photo {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+  

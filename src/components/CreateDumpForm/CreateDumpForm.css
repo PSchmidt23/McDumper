@@ -1,0 +1,70 @@
+/* src/components/CreateDumpForm/CreateDumpForm.css */
+
+.create-dump-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.create-dump-form-container {
+    background-color: #1b1b1b;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    color: #ffffff;
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.create-dump-form label {
+    display: block;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.create-dump-form input[type="text"],
+.create-dump-form input[type="date"],
+.create-dump-form input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.create-dump-form button {
+    background-color: #ffffff;
+    color: #0b0b0b;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.create-dump-form button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.required {
+    color: #ff0000;
+}

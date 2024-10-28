@@ -1,0 +1,82 @@
+/* src/pages/SettingsPage.css */
+
+.settings-page-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #fff;
+  }
+  
+  .settings-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .settings-form label {
+    margin-bottom: 15px;
+    color: #fff;
+  }
+  
+  .settings-form input[type='text'],
+  .settings-form input[type='file'] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    background-color: #1b1b1b;
+    border: 1px solid #3a3a3a;
+    color: #fff;
+    border-radius: 5px;
+  }
+  
+  .profile-picture-preview {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #3a3a3a;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .profile-picture-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+  }
+  
+  .settings-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .settings-buttons button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .settings-buttons button:hover {
+    background-color: #0056b3;
+  }
+  
+  .settings-buttons button[type='button'] {
+    background-color: #dc3545;
+  }
+  
+  .settings-buttons button[type='button']:hover {
+    background-color: #c82333;
+  }
+  

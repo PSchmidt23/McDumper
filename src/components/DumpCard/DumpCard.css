@@ -1,0 +1,82 @@
+/* src/components/DumpCard/DumpCard.css */
+
+.dump-card {
+    background-color: #1b1b1b;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+  }
+  
+  .dump-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3); /* Blue shadow */
+  }
+  
+  .cover-photo-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .dump-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .dump-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: 900; /* Heavy variant */
+    font-size: 24px;
+    color: #ffffff;
+    text-align: center; /* Ensure text is centered */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    padding: 0 10px;
+    word-wrap: break-word;
+    max-width: 90%; /* Prevent overflow */
+    white-space: normal; /* Allow text to wrap */
+  }
+  
+  .photo-pane {
+    background-color: #1b1b1b;
+    padding: 10px;
+  }
+  
+  .photo-scroll {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+  }
+  
+  .photo-scroll::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in Chrome and Safari */
+  }
+  
+  .thumbnail {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 5px;
+  }
+  
+  .no-photos {
+    color: #cccccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .no-photos svg {
+    margin-right: 5px;
+  }
+  
