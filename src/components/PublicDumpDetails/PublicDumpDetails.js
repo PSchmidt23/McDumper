@@ -30,7 +30,7 @@ const PublicDumpDetails = () => {
           // Fetch photos
           const photosCollectionRef = collection(db, 'dumps', dumpId, 'photos');
           const photosSnapshot = await getDocs(photosCollectionRef);
-          const photosData = photosSnapshot.docs.map(doc => doc.data());
+          const photosData = photosSnapshot.docs.map((doc) => doc.data());
           setPhotos(photosData);
         }
       } catch (error) {
@@ -44,12 +44,13 @@ const PublicDumpDetails = () => {
   const handleShareDump = () => {
     const dumpUrl = `${window.location.origin}/dump/${dumpId}`;
     if (navigator.share) {
-      navigator.share({
-        title: dump.title,
-        url: dumpUrl,
-      })
+      navigator
+        .share({
+          title: dump.title,
+          url: dumpUrl,
+        })
         .then(() => console.log('Dump shared successfully'))
-        .catch(error => console.error('Error sharing dump:', error));
+        .catch((error) => console.error('Error sharing dump:', error));
     } else {
       navigator.clipboard.writeText(dumpUrl);
       toast.success('Dump URL copied to clipboard!');
@@ -68,7 +69,11 @@ const PublicDumpDetails = () => {
   return (
     <div className="dump-details-container">
       <div className="cover-photo-container">
-        <img src={dump.coverPhotoUrl} alt={`${dump.title} Cover`} className="cover-photo" />
+        <img
+          src={dump.coverPhotoUrl}
+          alt={`${dump.title} Cover`}
+          className="cover-photo"
+        />
         <h1 className="dump-title">{dump.title}</h1>
         <button className="more-options-button" title="More Options">
           <FaEllipsisV />
@@ -84,7 +89,7 @@ const PublicDumpDetails = () => {
           <img
             key={photo.photoId}
             src={photo.photoUrl}
-            alt={`Photo ${index + 1}`}
+            alt=""
             className="dump-photo"
             onClick={() => openLightbox(index)}
           />
@@ -94,7 +99,7 @@ const PublicDumpDetails = () => {
         <Lightbox
           open={isLightboxOpen}
           close={() => setIsLightboxOpen(false)}
-          slides={photos.map(photo => ({ src: photo.photoUrl }))}
+          slides={photos.map((photo) => ({ src: photo.photoUrl }))}
           index={lightboxIndex}
           onIndexChange={setLightboxIndex}
         />

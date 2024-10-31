@@ -29,7 +29,7 @@ const DumpCard = ({ dump }) => {
               <img
                 key={index}
                 src={photo.photoUrl}
-                alt={`Photo ${index + 1}`}
+                alt=""
                 className="thumbnail"
               />
             ))}

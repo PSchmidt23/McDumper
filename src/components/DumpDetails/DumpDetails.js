@@ -116,7 +116,7 @@ const DumpDetails = () => {
           <img
             key={photo.photoId}
             src={photo.photoUrl}
-            alt={`Photo ${index + 1}`}
+            alt=""
             className="dump-photo"
             onClick={() => openLightbox(index)}
           />
